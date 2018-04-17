@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 # collectd-cookbook
-yet another collectd cookbook but it can run in network namespace
+
+for file in $(find . -type f -exec grep -l collectd {} \;)
+do
+  echo $file
+  sed -i '' s/collectd/collectd/g $file
+done
